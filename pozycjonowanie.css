@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    background: #0f172a;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+section {
+    padding: 120px 20px 80px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 60px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #334155;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.demo-box {
+    width: 120px;
+    height: 120px;
+    background: #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.relative-demo {
+    position: relative;
+    left: 40px;
+    background: #22c55e;
+}
+
+
+.absolute-wrapper {
+    position: relative;
+    height: 200px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.absolute-demo {
+    position: absolute;
+top: 20px;
+right: 20px;
+background: #ef4444;
+}
+
+.fixed-demo {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #8b5cf6;
+}
+
+.sticky-demo {
+position: sticky;
+top: 0;
+background: #f59e0b;
+padding: 10px;
+border-radius: 6px;
+margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #e2e8f0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0f172a;
+    color: white;
+    margin-top: 60px;
+}

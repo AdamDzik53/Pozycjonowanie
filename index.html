@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozycjonowanie w CSS</title>
+    <link rel="stylesheet" href="pozycjonowanie.css">
+</head>
+<body>
+
+    <nav>
+         <a href="#static">Static</a>
+        <a href="#relative">Relative</a>
+        <a href="#absolute">Absolute</a>
+        <a href="#fixed">Fixed</a>
+        <a href="#sticky">Sticky</a>
+        <a href="#zindex">Z-index</a>
+        <a href="#summary">Podsumowanie</a>
+    </nav>
+
+    <section id="static">
+        <div class="card">
+            <h1>position: static</h1>
+            <ul>
+                <li>Domyślne pozycjonowanie</li>
+                <li>Nie działa: top, left, right, bottom</li>
+                <li>Element w normalnym przepływie dokumentu</li>
+            </ul>
+            <pre><code>div {
+                position: static;
+            }</code></pre>
+            <div class="demo-box">STATIC</div>
+        </div>
+    </section>
+
+    <section id="relative">
+        <div class="card">
+        <h1>position: relative</h1>
+        <ul>
+            <li>Względem własnej pierwotnej pozycji</li>
+            <li>Działa: top, left, right, bottom</li>
+            <li>Miejsce w układzie zostaje zachowane</li>
+            <li>Punkt odniesienia dla absolute</li>
+        </ul>
+        <pre><code>div {
+            position: relative;
+            left: 40px;
+        }</code></pre>
+        <div class="demo-box relative-demo">RELATIVE</div>
+        </div>
+    </section>
+
+<section id="absolute">
+    <div class="card">
+    <h1>position: absolute</h1>
+    <ul>
+        <li>Względem najbliższego rodzica z relative</li>
+        <li>Usunięty z normalnego przepływu</li>
+        <li>Może nachodzić na inne elementy</li>
+    </ul>
+    <pre><code>.parent { position: relative; }
+    .child {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }</code></pre>
+
+    <div class="absolute-wrapper">
+    <div class="demo-box absolute-demo">ABSOLUTE</div>
+    </div>
+    </div>
+</section>
+
+    <section id="fixed">
+        <div class="card">
+        <h1>position: fixed</h1>
+        <ul>
+            <li>Względem okna przeglądarki</li>
+            <li>Nie przesuwa się przy scrollu</li>
+            <li>Usunięty z przepływu</li>
+        </ul>
+        <pre><code>div {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }</code></pre>
+        <div class="demo-box fixed-demo">FIXED</div>
+        </div>
+    </section>
+
+    <section id="sticky">
+        <div class="card">
+        <h1>position: sticky</h1>
+        <ul>
+            <li>Łączy relative i fixed</li>
+            <li>Wymaga określenia top</li>
+            <li>Działa w obrębie kontenera</li>
+        </ul>
+        <pre><code>div {
+            position: sticky;
+            top: 0;
+            }</code></pre>
+        <div class="sticky-demo">STICKY</div>
+        </div>
+    </section>
+
+    <section id="zindex">
+        <div class="card">
+        <h1>z-index</h1>
+        <ul>
+            <li>Określa kolejność warstw</li>
+            <li>Działa tylko z position ≠ static</li>
+            <li>Większa wartość = wyżej</li>
+        </ul>
+        <pre><code>div {
+            position: absolute;
+            z-index: 10;
+        }</code></pre>
+        </div>
+    </section>
+
+<section id="summary">
+    <div class="card">
+        <h1>Podsumowanie</h1>
+        <table>
+            <tr>
+                <th>Typ</th>
+                <th>Względem czego</th>
+                <th>Wpływ na inne</th>
+            </tr>
+            <tr>
+                <td>static</td>
+                <td>normalny układ</td>
+                <td>tak</td>
+            </tr>
+            <tr>
+                <td>relative</td>
+                <td>własna pozycja</td>
+                <td>tak</td>
+            </tr>
+            <tr>
+                <td>absolute</td>
+                <td>rodzic / strona</td>
+                <td>nie</td>
+            </tr>
+            <tr>
+                <td>fixed</td>
+                <td>viewport</td>
+                <td>nie</td>
+            </tr>
+            <tr>
+                <td>sticky</td>
+                <td>kontener</td>
+                <td>częściowo</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<footer>
+    Pozycjonowanie elementów w CSS
+</footer>
+
+</body>
+</html>
